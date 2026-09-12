@@ -38,6 +38,9 @@ coverage/
 *.sqlite3
 *.db
 
+# Saida bruta de scan — nunca versionada
+/scan/raw/
+
 # Sistema operacional e editor
 Thumbs.db
 Desktop.ini

@@ -1,0 +1,16 @@
+{
+  "name": "kinto-agentes",
+  "description": "Agentes e convencoes para construir um portal de locacao e venda de veiculos com Claude Code.",
+  "owner": {
+    "name": "hmurssa",
+    "url": "https://github.com/hmurssa"
+  },
+  "plugins": [
+    {
+      "name": "kinto-agentes",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Equipe de agentes e convencoes para um portal de locacao e venda de veiculos, coordenados por um orquestrador."
+    }
+  ]
+}

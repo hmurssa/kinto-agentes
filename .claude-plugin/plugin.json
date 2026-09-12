@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "kinto-agentes",
+  "displayName": "Kinto Agentes",
+  "version": "0.1.0",
+  "description": "Equipe de agentes e convencoes para um portal de locacao e venda de veiculos: product owner, tech lead, BDD, QA end-to-end, frontend React, backend FastAPI e banco PostgreSQL, coordenados por um orquestrador.",
+  "author": {
+    "name": "hmurssa",
+    "url": "https://github.com/hmurssa"
+  },
+  "repository": "https://github.com/hmurssa/kinto-agentes",
+  "homepage": "https://github.com/hmurssa/kinto-agentes#readme",
+  "keywords": [
+    "agentes",
+    "locacao-de-veiculos",
+    "product-owner",
+    "bdd",
+    "gherkin",
+    "playwright",
+    "fastapi",
+    "react",
+    "postgres",
+    "lgpd"
+  ],
+
+  "agents": [
+    "./.claude/agents/orquestrador.md",
+    "./.claude/agents/product-owner.md",
+    "./.claude/agents/tech-lead.md",
+    "./.claude/agents/user-story-reader.md",
+    "./.claude/agents/bdd-gherkin.md",
+    "./.claude/agents/playwright-tester.md",
+    "./.claude/agents/frontend-react.md",
+    "./.claude/agents/backend-python.md",
+    "./.claude/agents/db-postgres.md"
+  ],
+
+  "skills": "./.claude/skills/",
+
+  "metadata": {
+    "especificacao": "./specs/PORTAL.md",
+    "designTokens": "./specs/design-tokens.json",
+    "aviso": "O .mcp.json na raiz declara os servidores Trello e GitHub. Instalar este plugin habilita esses servidores, que leem credenciais das variaveis de ambiente TRELLO_API_KEY, TRELLO_TOKEN e GITHUB_PAT. Nenhuma credencial e versionada."
+  }
+}
