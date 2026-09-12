@@ -1,0 +1,329 @@
+{
+  "$schema": "https://raw.githubusercontent.com/design-tokens/community-group/main/schema.json",
+  "_meta": {
+    "nome": "kinto-portal",
+    "versao": "0.1.0",
+    "descricao": "Tokens de design do portal de locacao e venda de veiculos. Consumido pelo agente frontend-react. Nenhum valor cru de cor, espacamento, tipografia, raio ou sombra deve aparecer em componente.",
+    "aviso": "As cores sao um ponto de partida neutro, validadas em contraste, nao a identidade visual definitiva. Troque os valores de color.primitive pela paleta real da marca e revalide o contraste antes de considerar fechado.",
+    "contraste": "Todo par texto/fundo dos tokens semanticos atinge no minimo 4.5:1, conforme exigido pelo agente frontend-react."
+  },
+
+  "color": {
+    "primitive": {
+      "azul": {
+        "50":  "#eff6ff",
+        "100": "#dbeafe",
+        "200": "#bfdbfe",
+        "300": "#93c5fd",
+        "400": "#60a5fa",
+        "500": "#3b82f6",
+        "600": "#2563eb",
+        "700": "#1d4ed8",
+        "800": "#1e40af",
+        "900": "#1e3a8a",
+        "950": "#172554"
+      },
+      "cinza": {
+        "0":   "#ffffff",
+        "50":  "#f8fafc",
+        "100": "#f1f5f9",
+        "200": "#e2e8f0",
+        "300": "#cbd5e1",
+        "400": "#94a3b8",
+        "500": "#64748b",
+        "600": "#475569",
+        "700": "#334155",
+        "800": "#1e293b",
+        "900": "#0f172a",
+        "950": "#020617"
+      },
+      "verde": {
+        "50":  "#f0fdf4",
+        "100": "#dcfce7",
+        "500": "#22c55e",
+        "600": "#16a34a",
+        "700": "#15803d",
+        "800": "#166534"
+      },
+      "ambar": {
+        "50":  "#fffbeb",
+        "100": "#fef3c7",
+        "500": "#f59e0b",
+        "600": "#d97706",
+        "700": "#b45309",
+        "800": "#92400e"
+      },
+      "vermelho": {
+        "50":  "#fef2f2",
+        "100": "#fee2e2",
+        "400": "#f87171",
+        "500": "#ef4444",
+        "600": "#dc2626",
+        "700": "#b91c1c",
+        "800": "#991b1b"
+      }
+    },
+
+    "semantico": {
+      "claro": {
+        "fundo": {
+          "pagina":     "{color.primitive.cinza.50}",
+          "superficie": "{color.primitive.cinza.0}",
+          "elevada":    "{color.primitive.cinza.0}",
+          "afundada":   "{color.primitive.cinza.100}",
+          "inverso":    "{color.primitive.cinza.900}"
+        },
+        "texto": {
+          "primario":   "{color.primitive.cinza.900}",
+          "secundario": "{color.primitive.cinza.600}",
+          "terciario":  "{color.primitive.cinza.500}",
+          "desativado": "{color.primitive.cinza.400}",
+          "inverso":    "{color.primitive.cinza.0}",
+          "link":       "{color.primitive.azul.700}"
+        },
+        "borda": {
+          "sutil":  "{color.primitive.cinza.200}",
+          "padrao": "{color.primitive.cinza.300}",
+          "forte":  "{color.primitive.cinza.400}",
+          "foco":   "{color.primitive.azul.600}"
+        },
+        "acao": {
+          "primaria":            "{color.primitive.azul.600}",
+          "primariaHover":       "{color.primitive.azul.700}",
+          "primariaAtiva":       "{color.primitive.azul.800}",
+          "primariaTexto":       "{color.primitive.cinza.0}",
+          "primariaDesativada":  "{color.primitive.cinza.300}",
+          "secundariaFundo":     "{color.primitive.cinza.100}",
+          "secundariaTexto":     "{color.primitive.cinza.800}",
+          "secundariaHover":     "{color.primitive.cinza.200}",
+          "destrutiva":          "{color.primitive.vermelho.600}",
+          "destrutivaHover":     "{color.primitive.vermelho.700}",
+          "destrutivaTexto":     "{color.primitive.cinza.0}"
+        },
+        "feedback": {
+          "sucessoFundo":  "{color.primitive.verde.50}",
+          "sucessoBorda":  "{color.primitive.verde.500}",
+          "sucessoTexto":  "{color.primitive.verde.800}",
+          "alertaFundo":   "{color.primitive.ambar.50}",
+          "alertaBorda":   "{color.primitive.ambar.500}",
+          "alertaTexto":   "{color.primitive.ambar.800}",
+          "erroFundo":     "{color.primitive.vermelho.50}",
+          "erroBorda":     "{color.primitive.vermelho.500}",
+          "erroTexto":     "{color.primitive.vermelho.800}",
+          "infoFundo":     "{color.primitive.azul.50}",
+          "infoBorda":     "{color.primitive.azul.500}",
+          "infoTexto":     "{color.primitive.azul.800}"
+        },
+        "disponibilidade": {
+          "_nota":        "Estado visual de veiculo e periodo no calendario de reserva. O significado de cada estado vem do PORTAL.md, nao daqui.",
+          "disponivel":   "{color.primitive.verde.500}",
+          "indisponivel": "{color.primitive.cinza.300}",
+          "selecionado":  "{color.primitive.azul.600}",
+          "conflito":     "{color.primitive.vermelho.500}"
+        }
+      },
+
+      "escuro": {
+        "fundo": {
+          "pagina":     "{color.primitive.cinza.950}",
+          "superficie": "{color.primitive.cinza.900}",
+          "elevada":    "{color.primitive.cinza.800}",
+          "afundada":   "{color.primitive.cinza.950}",
+          "inverso":    "{color.primitive.cinza.50}"
+        },
+        "texto": {
+          "primario":   "{color.primitive.cinza.50}",
+          "secundario": "{color.primitive.cinza.300}",
+          "terciario":  "{color.primitive.cinza.400}",
+          "desativado": "{color.primitive.cinza.600}",
+          "inverso":    "{color.primitive.cinza.900}",
+          "link":       "{color.primitive.azul.300}"
+        },
+        "borda": {
+          "sutil":  "{color.primitive.cinza.800}",
+          "padrao": "{color.primitive.cinza.700}",
+          "forte":  "{color.primitive.cinza.600}",
+          "foco":   "{color.primitive.azul.400}"
+        },
+        "acao": {
+          "primaria":            "{color.primitive.azul.500}",
+          "primariaHover":       "{color.primitive.azul.400}",
+          "primariaAtiva":       "{color.primitive.azul.300}",
+          "primariaTexto":       "{color.primitive.cinza.950}",
+          "primariaDesativada":  "{color.primitive.cinza.700}",
+          "secundariaFundo":     "{color.primitive.cinza.800}",
+          "secundariaTexto":     "{color.primitive.cinza.100}",
+          "secundariaHover":     "{color.primitive.cinza.700}",
+          "destrutiva":          "{color.primitive.vermelho.500}",
+          "destrutivaHover":     "{color.primitive.vermelho.400}",
+          "destrutivaTexto":     "{color.primitive.cinza.950}"
+        },
+        "feedback": {
+          "sucessoFundo":  "{color.primitive.verde.800}",
+          "sucessoBorda":  "{color.primitive.verde.500}",
+          "sucessoTexto":  "{color.primitive.verde.100}",
+          "alertaFundo":   "{color.primitive.ambar.800}",
+          "alertaBorda":   "{color.primitive.ambar.500}",
+          "alertaTexto":   "{color.primitive.ambar.100}",
+          "erroFundo":     "{color.primitive.vermelho.800}",
+          "erroBorda":     "{color.primitive.vermelho.500}",
+          "erroTexto":     "{color.primitive.vermelho.100}",
+          "infoFundo":     "{color.primitive.azul.800}",
+          "infoBorda":     "{color.primitive.azul.500}",
+          "infoTexto":     "{color.primitive.azul.100}"
+        },
+        "disponibilidade": {
+          "disponivel":   "{color.primitive.verde.500}",
+          "indisponivel": "{color.primitive.cinza.700}",
+          "selecionado":  "{color.primitive.azul.400}",
+          "conflito":     "{color.primitive.vermelho.500}"
+        }
+      }
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "base":  "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+      "mono":  "'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace"
+    },
+    "fontWeight": {
+      "regular":  "400",
+      "medio":    "500",
+      "semibold": "600",
+      "bold":     "700"
+    },
+    "fontSize": {
+      "_nota": "Escala em rem, base 16px. Nunca usar px em texto, para respeitar o zoom de fonte do navegador.",
+      "xs":   "0.75rem",
+      "sm":   "0.875rem",
+      "base": "1rem",
+      "lg":   "1.125rem",
+      "xl":   "1.25rem",
+      "2xl":  "1.5rem",
+      "3xl":  "1.875rem",
+      "4xl":  "2.25rem",
+      "5xl":  "3rem"
+    },
+    "lineHeight": {
+      "apertado":   "1.2",
+      "normal":     "1.5",
+      "confortavel": "1.7"
+    },
+    "letterSpacing": {
+      "apertado": "-0.02em",
+      "normal":   "0",
+      "largo":    "0.04em"
+    },
+    "estilo": {
+      "_nota": "Combinacoes prontas. O componente escolhe um estilo, nao monta um.",
+      "titulo1":    { "fontSize": "{typography.fontSize.4xl}", "fontWeight": "{typography.fontWeight.bold}",     "lineHeight": "{typography.lineHeight.apertado}", "letterSpacing": "{typography.letterSpacing.apertado}" },
+      "titulo2":    { "fontSize": "{typography.fontSize.3xl}", "fontWeight": "{typography.fontWeight.bold}",     "lineHeight": "{typography.lineHeight.apertado}", "letterSpacing": "{typography.letterSpacing.apertado}" },
+      "titulo3":    { "fontSize": "{typography.fontSize.2xl}", "fontWeight": "{typography.fontWeight.semibold}", "lineHeight": "{typography.lineHeight.apertado}", "letterSpacing": "{typography.letterSpacing.normal}" },
+      "titulo4":    { "fontSize": "{typography.fontSize.xl}",  "fontWeight": "{typography.fontWeight.semibold}", "lineHeight": "{typography.lineHeight.normal}",   "letterSpacing": "{typography.letterSpacing.normal}" },
+      "corpo":      { "fontSize": "{typography.fontSize.base}","fontWeight": "{typography.fontWeight.regular}",  "lineHeight": "{typography.lineHeight.normal}",   "letterSpacing": "{typography.letterSpacing.normal}" },
+      "corpoForte": { "fontSize": "{typography.fontSize.base}","fontWeight": "{typography.fontWeight.semibold}", "lineHeight": "{typography.lineHeight.normal}",   "letterSpacing": "{typography.letterSpacing.normal}" },
+      "auxiliar":   { "fontSize": "{typography.fontSize.sm}",  "fontWeight": "{typography.fontWeight.regular}",  "lineHeight": "{typography.lineHeight.normal}",   "letterSpacing": "{typography.letterSpacing.normal}" },
+      "legenda":    { "fontSize": "{typography.fontSize.xs}",  "fontWeight": "{typography.fontWeight.medio}",    "lineHeight": "{typography.lineHeight.normal}",   "letterSpacing": "{typography.letterSpacing.largo}" },
+      "rotulo":     { "fontSize": "{typography.fontSize.sm}",  "fontWeight": "{typography.fontWeight.medio}",    "lineHeight": "{typography.lineHeight.normal}",   "letterSpacing": "{typography.letterSpacing.normal}" }
+    }
+  },
+
+  "space": {
+    "_nota": "Escala de 4px. Todo espacamento sai daqui.",
+    "0":  "0",
+    "1":  "0.25rem",
+    "2":  "0.5rem",
+    "3":  "0.75rem",
+    "4":  "1rem",
+    "5":  "1.25rem",
+    "6":  "1.5rem",
+    "8":  "2rem",
+    "10": "2.5rem",
+    "12": "3rem",
+    "16": "4rem",
+    "20": "5rem",
+    "24": "6rem"
+  },
+
+  "radius": {
+    "nenhum":  "0",
+    "sm":      "0.25rem",
+    "md":      "0.5rem",
+    "lg":      "0.75rem",
+    "xl":      "1rem",
+    "completo": "9999px"
+  },
+
+  "borderWidth": {
+    "fino":   "1px",
+    "medio":  "2px",
+    "grosso": "4px"
+  },
+
+  "shadow": {
+    "_nota": "No tema escuro a elevacao vem de color.semantico.escuro.fundo.elevada, nao de sombra.",
+    "nenhuma": "none",
+    "sm":      "0 1px 2px 0 rgb(2 6 23 / 0.06)",
+    "md":      "0 4px 8px -2px rgb(2 6 23 / 0.10), 0 2px 4px -2px rgb(2 6 23 / 0.06)",
+    "lg":      "0 12px 20px -4px rgb(2 6 23 / 0.12), 0 4px 8px -4px rgb(2 6 23 / 0.08)",
+    "xl":      "0 24px 32px -8px rgb(2 6 23 / 0.16)",
+    "foco":    "0 0 0 3px rgb(37 99 235 / 0.40)"
+  },
+
+  "focus": {
+    "_nota": "Foco visivel e requisito de acessibilidade, nao decoracao. Nunca usar outline:none sem substituto equivalente.",
+    "largura": "{borderWidth.medio}",
+    "offset":  "2px",
+    "cor":     "{color.semantico.claro.borda.foco}",
+    "sombra":  "{shadow.foco}"
+  },
+
+  "breakpoint": {
+    "_nota": "Mobile primeiro. A consulta de midia sempre cresce a partir da menor largura.",
+    "sm":  "480px",
+    "md":  "768px",
+    "lg":  "1024px",
+    "xl":  "1280px",
+    "2xl": "1536px"
+  },
+
+  "layout": {
+    "larguraMaximaConteudo": "75rem",
+    "larguraMaximaTexto":    "68ch",
+    "gutter": {
+      "mobile":  "{space.4}",
+      "tablet":  "{space.6}",
+      "desktop": "{space.8}"
+    },
+    "alvoToqueMinimo": {
+      "_nota": "Area minima de toque, exigida em qualquer controle interativo.",
+      "valor": "44px"
+    }
+  },
+
+  "motion": {
+    "_nota": "Toda transicao precisa respeitar prefers-reduced-motion. Nesse caso, duracao vai a instantaneo.",
+    "duration": {
+      "instantaneo": "0ms",
+      "rapida":      "120ms",
+      "normal":      "200ms",
+      "lenta":       "320ms"
+    },
+    "easing": {
+      "padrao": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "entrada": "cubic-bezier(0, 0, 0.2, 1)",
+      "saida":   "cubic-bezier(0.4, 0, 1, 1)"
+    }
+  },
+
+  "zIndex": {
+    "base":     "0",
+    "elevado":  "10",
+    "fixo":     "100",
+    "overlay":  "200",
+    "modal":    "300",
+    "popover":  "400",
+    "toast":    "500"
+  }
+}
